@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import Head from 'next/head';
-import MeetupList from "@/components/meetups/MeetupList";
+import MeetupList from "../components/meetups/MeetupList";
 import { MongoClient } from "mongodb";
 
 function HomePage(props) {

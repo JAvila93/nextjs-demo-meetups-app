@@ -1,7 +1,7 @@
 import { MongoClient, ObjectId } from 'mongodb';
 import { Fragment } from 'react';
 import Head from 'next/head';
-import MeetupDetail from "@/components/meetups/MeetupDetail";
+import MeetupDetail from "../../components/meetups/MeetupDetail";
 
 function MeetupDetailsPage(props) {
     return (
@@ -34,7 +34,7 @@ export async function getStaticPaths() {
         paths: meetups.map(meetup => ({
             params: { meetupId: meetup._id.toString() }
         })),
-        fallback: false
+        fallback: 'blocking'
     };
 }
 
